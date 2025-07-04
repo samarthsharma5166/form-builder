@@ -7,7 +7,7 @@ import useDesigner from "./hooks/useDesigner";
 import { cn } from "@/lib/utils";
 
 const DesignerElementWrappper = ({ element }: { element: FormElementInstance }) => {
-  const { removeElement, selectedElement, setSelectedElement } = useDesigner()!;
+  const { removeElement, setSelectedElement } = useDesigner()!;
   const [mouseIsOver, setMouseIsOver] = useState<boolean>(false);
   const topHalf = useDroppable({
     id: element.id + "-top",

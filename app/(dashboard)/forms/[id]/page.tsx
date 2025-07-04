@@ -13,9 +13,9 @@ import {Checkbox} from '@/components/ui/checkbox'
 import { format, formatDistance } from 'date-fns';
 import { Badge } from '@/components/ui/badge';
 async function FormDetailPage({params}:{
-  params:{
+  params:Promise<{
     id:string;
-  }
+  }>
 }) {
   const param = await params;
   const form = await GetFormById(Number(param.id));

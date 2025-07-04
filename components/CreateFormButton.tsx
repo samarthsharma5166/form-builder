@@ -15,7 +15,6 @@ import { Button } from './ui/button'
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -50,6 +49,7 @@ async function onSubmit(values: fromType) {
       console.log(formId);
       router.push(`/builder/${formId}`);
     } catch (error) {
+      console.log(error);
       toast.error("Something went wrong", {
         description: "Something went wrong, Please try again",
         

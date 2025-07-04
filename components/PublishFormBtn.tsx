@@ -11,7 +11,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import { FaIcons, FaSpinner } from 'react-icons/fa'
+import { FaSpinner } from 'react-icons/fa'
 import { useTransition } from 'react'
 import { toast } from 'sonner'
 import { PublistFormAction } from '@/actions/form'
@@ -26,6 +26,7 @@ function PublishFormBtn({ id }: { id: number }) {
       toast.success("Form published successfully");
       router.refresh();
     } catch (error) {
+      console.log(error)
       toast.error("Something went wrong");
     }
   }

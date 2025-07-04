@@ -7,7 +7,7 @@ import { ImShare } from "react-icons/im";
 import { toast } from "sonner";
 
 const FormLinkShare = ({shareUrl}:{shareUrl:string}) => {
-    const [mounted,setMounted] = useState();
+    const [mounted,setMounted] = useState<boolean | null>(null);
     const shareLink = `${window.location.origin}/submit/${shareUrl}`
     useEffect(() => {
         setMounted(true);

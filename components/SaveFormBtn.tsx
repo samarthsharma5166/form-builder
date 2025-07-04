@@ -14,6 +14,7 @@ function SaveFormBtn({id}:{id:number}) {
       await updateFormContentAction(id, jsonElement);
       toast.success("Form saved successfully");
     } catch (error) {
+      console.log(error)
       toast.error("Something went wrong");
     }
   } 
