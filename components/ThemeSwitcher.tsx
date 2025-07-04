@@ -1,8 +1,8 @@
 "use client"
 import { useTheme } from "next-themes";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
-import { LampDeskIcon, LaptopMinimal, MoonIcon, SunIcon } from "lucide-react";
+import { LaptopMinimal, MoonIcon, SunIcon } from "lucide-react";
 
 function ThemeSwitcher() {
   const {theme ,setTheme } = useTheme();

@@ -87,7 +87,7 @@ function StatsCards(props: StateCardProp) {
 }
 
 
-function StatsCard(
+export function StatsCard(
   {
     title,
     loading,
@@ -141,7 +141,6 @@ async function FormCards() {
 }
 
 function FormCard({ form }: { form: Form }) {
-  console.log("+++++++++++", form);
   return (<Card>
     <CardHeader>
       <CardTitle className="flex items-center gap-2 justify-between">
@@ -162,7 +161,7 @@ function FormCard({ form }: { form: Form }) {
     </CardContent>
     <CardFooter>
       {form.published ? <Button asChild className="w-full mt-2 text-md gap-4">
-        <Link href={`/form/${form.id}`}>View Submissions <BiRightArrowAlt/> </Link>
+        <Link href={`/forms/${form.id}`}>View Submissions <BiRightArrowAlt/> </Link>
       </Button> : <Button variant={"secondary"} asChild className="w-full mt-2 text-md gap-4">
         <Link href={`/builder/${form.id}`}>Edit Form <FaEdit /> </Link>
       </Button>}
